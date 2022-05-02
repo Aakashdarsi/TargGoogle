@@ -7,11 +7,11 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": true,
-      "cwd": "/Users/aakash/Desktop/TargGoogle/Arrays",
+      "cwd": "/Users/aakash/Desktop/TargGoogle/Patterns",
       "environment": [],
-      "program": "/Users/aakash/Desktop/TargGoogle/Arrays/build/Debug/outDebug",
+      "program": "/Users/aakash/Desktop/TargGoogle/Patterns/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
-      "MIMode": "gdb",
+      "MIMode": "lldb",
       "console": "integratedTerminal"
     }
   ]
