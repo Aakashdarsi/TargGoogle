@@ -1,6 +1,6 @@
 // in a binary search problem think of the search space
 // binary search is applied on montonic regions -> either increasing or decreasing search space
-
+// Important problem 
 #include<iostream>
 using namespace std;
 
@@ -9,7 +9,7 @@ float square_root(int n,int p){
     int low = 0;
     int high = n;
     float ans = -1;
-    while(low<high){
+    while(low<=high){
         int mid = (low+high)>>1;
         if(mid * mid == n){
             ans = mid;
