@@ -1,0 +1,2 @@
+Mean of given data can be given by summing up all the data and dividing the number of elements in data
+Median is the middlesmost thing in sorted thing. if the thing is of even length we get 2 mids then that case we will get the mean if those as answer
