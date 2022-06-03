@@ -18,8 +18,13 @@ string replace_pi(string s){
 
 
 int main(){
-    string s;
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        string s;
     cin>>s;
-    cout<<replace_pi(s);
+    cout<<replace_pi(s)<<endl;
+    }
+    
     return 0;
 }
