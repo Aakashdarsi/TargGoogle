@@ -34,14 +34,37 @@ void print(Node *head)
         temp= temp->next;
     }
 }
-void insert_at_ith_position(Node *head,int position,int data)
+Node* insert_at_ith_position(Node *head,int position,int data)
 {
-    
+    Node *new_node = new Node(data);
+    if(position == 0)
+    {
+        new_node->next = head;
+        head = new_node;
+        return head;
+    }
+    int count = 0;
+    Node *temp = head;
+    while(count<position-1 and temp->next != NULL)
+    {
+        temp = temp->next;
+        count++;
+    }
+    if(temp->next != NULL)
+    {
+        new_node->next = temp->next;
+        temp->next = new_node;
+    }
+    return head;
 }
 
 int main()
 {
     Node *head = takeInput();
+    print(head);
+    int i,data;
+    cin>>i>>data;
+    head = insert_at_ith_position(head,i,data);
     print(head);
     return 0;
 }
