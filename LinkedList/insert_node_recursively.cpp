@@ -1,7 +1,19 @@
 #include<iostream>
 #include "node.cpp"
 using namespace std;
-
+Node* reverse(Node *head)
+{
+    Node *prev = NULL;
+    Node *curr = head;
+    Node *next = NULL;
+    while(curr!=NULL)
+    {
+        next = curr->next;
+        curr->next = prev;
+        curr = next ;
+    }
+    return prev;
+}
 Node *takeInput(){
 
     int data;
@@ -16,7 +28,7 @@ Node *takeInput(){
         }
         else{
             tail->next = newNode;
-            tail = newNode;
+            tail = tail->next;
         }
         cin>>data;
     }

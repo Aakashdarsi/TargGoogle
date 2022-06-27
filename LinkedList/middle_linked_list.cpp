@@ -16,7 +16,7 @@ Node *takeInput(){
         }
         else{
             tail->next = newNode;
-            tail = newNode;
+            tail = tail->next;
         }
         cin>>data;
     }
@@ -30,10 +30,34 @@ void print(Node *head){
     }
 }
 
+int getLength(Node *head)
+{
+    int count = 0 ;
+    while(head!= NULL)
+    {
+        count++;
+        head = head->next;
+    }return count;
+}
 
+int getMiddle(Node *head)
+{
+    int len = getLength(head);
+    int position = (len>>1)+1;
+    int cp = 0;
+    Node *temp = head;
+    while(cp<position-1)
+    {
+        cp++;
+        temp=temp->next;
+    }
+    return temp->data;
+}
 
 int main(){
     Node *head = takeInput();
     print(head);
+    cout<<endl;
+    cout<<getMiddle(head);
     return 0;
 }
