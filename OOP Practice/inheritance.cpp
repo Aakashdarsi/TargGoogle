@@ -24,9 +24,9 @@ class Rectangle : public shape{
 };
 
 int main(){
-    Rectangle r;
-    r.setLength(10);
-    r.setWidth(23);
-    r.calArea();
+    Rectangle *r = new Rectangle;
+    r->setLength(10);
+    r->setWidth(23);
+    r->calArea();
     return 0;
 }
