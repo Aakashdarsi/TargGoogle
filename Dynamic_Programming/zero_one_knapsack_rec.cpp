@@ -15,6 +15,7 @@ int knapsack(int v[],int wt[],int bag_wt,int m){
         return knapsack(v,wt,bag_wt,m-1);
 
     }
+    // two possible cases considering and not considering element
     else{
         return max(knapsack(v,wt,bag_wt,m-1),v[m-1]+knapsack(v,wt,bag_wt-wt[m-1],m-1));
     }
