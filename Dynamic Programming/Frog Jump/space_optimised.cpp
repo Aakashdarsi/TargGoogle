@@ -3,7 +3,7 @@
 using namespace std;
 int solve(int n,vector<int> &heights){
     int prev = 0;
-    int prev2 = 0;
+    int prev2 = 0; 
     for(int i=1;i<=n;i++){
         int jump_one = abs(heights[i] - heights[i-1])+ prev;
         int jump_two = INT_MAX;
